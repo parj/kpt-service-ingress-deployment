@@ -40,6 +40,22 @@ openAPI:
           values:
           - marker: NAME_SETTER
             ref: '#/definitions/io.k8s.cli.setters.name'
+    io.k8s.cli.substitutions.appdeployment-name-value:
+      x-k8s-cli:
+        substitution:
+          name: deployment-name-value
+          pattern: NAME_SETTER-deployment
+          values:
+          - marker: NAME_SETTER
+            ref: '#/definitions/io.k8s.cli.setters.name'
+    io.k8s.cli.substitutions.appcontainer-name-value:
+      x-k8s-cli:
+        substitution:
+          name: container-name-value
+          pattern: NAME_SETTER-container
+          values:
+          - marker: NAME_SETTER
+            ref: '#/definitions/io.k8s.cli.setters.name'
     io.k8s.cli.setters.port:
       x-k8s-cli:
         setter:

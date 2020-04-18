@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-deployment
+  name: app-deployment # {"$ref":"#/definitions/io.k8s.cli.substitutions.appdeployment-name-value"}
   namespace: app-namespace # {"$ref":"#/definitions/io.k8s.cli.setters.namespace"}
 spec:
   selector:
@@ -14,7 +14,7 @@ spec:
         app: app # {"$ref":"#/definitions/io.k8s.cli.setters.name"}
     spec:
       containers:
-      - name: app-container
+      - name: app-container # {"$ref":"#/definitions/io.k8s.cli.substitutions.appcontainer-name-value"}
         image: parjanya/samplespringbootapp:1.6-SNAPSHOT # {"$ref":"#/definitions/io.k8s.cli.substitutions.image-value"}
         ports:
         - containerPort: 9999 # {"$ref":"#/definitions/io.k8s.cli.setters.port"}
