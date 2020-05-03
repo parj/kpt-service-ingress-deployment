@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app-container # {"$ref":"#/definitions/io.k8s.cli.substitutions.appcontainer-name-value"}
-        image: parjanya/samplespringbootapp:1.6-SNAPSHOT # {"$ref":"#/definitions/io.k8s.cli.substitutions.image-value"}
+        image: parjanya/samplespringbootapp:1.6-SNAPSHOT # {"$ref":"#/definitions/io.k8s.cli.setters.image"}
         ports:
         - containerPort: 9999 # {"$ref":"#/definitions/io.k8s.cli.setters.port"}
           name: "container-port"
